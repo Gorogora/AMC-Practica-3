@@ -1,0 +1,8 @@
+digraph AFD {
+	 rankdir=LR;
+	 size="8,5"
+	 node [shape = doublecircle, style=filled, fillcolor=gray]; 3;
+	 node [shape = circle, fillcolor=white];
+	 0 -> 1 [ label = "a" ];
+	 1 -> 2 [ label = "b" ];
+}
