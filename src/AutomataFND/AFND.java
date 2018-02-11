@@ -44,8 +44,8 @@ public class AFND implements Cloneable, Proceso{
      * @param simbolo Simbolo que se consume en la transición.
      * @param estadosFinales Estados a los que se puede llegar desde ese 'estadoOrigen' y ese 'símbolo'.
      */
-    public void agregarTransicion(int estadoOrigen, char simbolo, HashSet<Integer> estadosFinales){
-        transiciones.add(new TransicionAFND(estadoOrigen, simbolo, estadosFinales));
+    public void agregarTransicion(int _estadoOrigen, char _simbolo, HashSet<Integer> _estadosFinales){
+        transiciones.add(new TransicionAFND(_estadoOrigen, _simbolo, _estadosFinales));
     }
     
     /**

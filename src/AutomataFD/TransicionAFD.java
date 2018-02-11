@@ -58,18 +58,15 @@ public class TransicionAFD implements Cloneable{
      */
     @Override
     public boolean equals(Object obj){
-        if(obj == null)
-            return false;
-        else if(obj == this)
-            return true;
-        else if(obj instanceof TransicionAFD){
-            TransicionAFD afd = (TransicionAFD) obj;
-            return afd.estadoOrigen == this.estadoOrigen &&
+
+	if (getClass () != obj.getClass ())  { 
+             return false; }
+	else {
+	     TransicionAFD afd = (TransicionAFD) obj;
+	    return afd.estadoOrigen == this.estadoOrigen &&
                     afd.estadoDestino == this.estadoDestino &&
                     afd.simbolo == this.simbolo;
-        }
-        else
-            return false;        
+	}
     }
 
     @Override

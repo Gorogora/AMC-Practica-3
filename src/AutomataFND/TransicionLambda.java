@@ -6,8 +6,6 @@
 package AutomataFND;
 
 import java.util.HashSet;
-import java.util.Objects;
-
 /**
  *
  * @author ana
@@ -52,19 +50,16 @@ public class TransicionLambda implements Cloneable{
 
     @Override
     public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        else if (obj == this) {
-            return true;
-        }
-        else if (obj instanceof TransicionLambda) {
-            TransicionLambda ob = (TransicionLambda) obj;
-            return this.estadoOrigen == ob.estadoOrigen;
-        } 
+
+
+	if (getClass () != obj.getClass ())  { 
+             return false; 
+	}
         else {
-            return false;
-        }
+           TransicionLambda ob = (TransicionLambda) obj;
+           return this.estadoOrigen == ob.estadoOrigen;
+         }	
+
     }
     
     @Override
